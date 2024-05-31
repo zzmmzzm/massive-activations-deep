@@ -10,7 +10,7 @@ from .model_dict import MODEL_DICT_LLMs
 def load_llm(args):
     print(f"loading model {args.model}")
     model_name, cache_dir = MODEL_DICT_LLMs[args.model]["model_id"], MODEL_DICT_LLMs[args.model]["cache_dir"]
-
+    print(model_name)
     if "falcon" in args.model or "mpt" in args.model or "phi" in args.model:
         model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16, cache_dir=cache_dir, low_cpu_mem_usage=True, device_map="auto", trust_remote_code=True, token=args.access_token)
     elif "mistral" in args.model or "pythia" in args.model:

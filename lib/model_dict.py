@@ -1,9 +1,9 @@
-CACHE_DIR_BASE = "./model_weights"
+CACHE_DIR_BASE = "/home/mo.zhu/workspace/"
 
 MODEL_DICT_LLMs = {
     ### llama2 model
     "llama2_7b": {
-        "model_id": "meta-llama/Llama-2-7b-hf",
+        "model_id": "/mnt/llms/model/meta-llama/Llama-2-7b-hf",
         "cache_dir": CACHE_DIR_BASE
     },
     "llama2_13b": {

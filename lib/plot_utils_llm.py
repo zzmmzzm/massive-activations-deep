@@ -66,6 +66,16 @@ def plot_3d_feat(obj, layer_id, model_name, savedir):
     plot_3d_feat_sub(ax, obj, 0, layer_id, model_name)
     plt.savefig(os.path.join(savedir, f"{model_name}_layer_{layer_id+1}.png"), bbox_inches="tight", dpi=200)
 
+def plot_3d_feat_index(obj, layer_id, model_name, savedir, seq_index):
+    fig = plt.figure(figsize=(14,6))
+    fig.tight_layout() # Or equivalently,  "plt.tight_layout()"
+    plt.subplots_adjust(wspace=0.13)
+
+    # for i in range(3):
+    ax = fig.add_subplot(1,1, 1, projection='3d')
+    plot_3d_feat_sub(ax, obj, 0, layer_id, model_name)
+    plt.savefig(os.path.join(savedir, f"{model_name}_layer_{layer_id+1}_{seq_index}.png"), bbox_inches="tight", dpi=200)
+
 
 def plot_layer_ax_sub(ax, mean, model_name):
     colors = ["cornflowerblue", "mediumseagreen", "C4", "teal",  "dimgrey"]
