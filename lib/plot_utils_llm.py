@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
+plt.rcParams['figure.max_open_warning'] = 30  # 设置为30或更高的数字
+
 matplotlib.rcParams['pgf.texsystem'] = 'pdflatex'
 matplotlib.rcParams.update({
     'font.size': 18,
