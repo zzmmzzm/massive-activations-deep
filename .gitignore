@@ -1,0 +1,6 @@
+results/llm/diff/
+results/llm/diff2/
+dataset/togethercomputer/
+RedPajama-Data-1t-Sample/
+monkey_patch/__pycache__/
+lib/__pycache__/
